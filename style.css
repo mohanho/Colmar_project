@@ -1,0 +1,345 @@
+/* --- General Rules --- */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0px;
+  }
+
+  li { list-style-type: none; }
+
+  a {text-decoration: none;}
+
+  h1, h2, h3, p, span, a { color: #4A4A4A}
+
+  h1 { font-size: 2em;  }
+
+  .capital {text-transform: uppercase;}
+
+
+ /* --- Reusable Rules --- */
+@media only screen and (max-width: 768px) {
+
+    .mobile-hidden { display: none; }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .left-60 {
+        width: 60%;    
+    }
+
+    .right-40 {
+        width: 40%;
+    }
+
+    .left-35 {
+        width: 35%;
+    }
+
+    .right-65 {
+        width: 65%;
+    }
+   
+
+    .background-change {
+        transition-property: background-color;transition-duration: 3s;
+    }
+
+    .background-change:hover {
+        background-color: #D8D8D8 ;
+    }
+
+}
+
+/* -- Header on Mobile-- */
+header {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+  
+nav { width: 100%; }
+  
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+}
+  
+  
+  /*  --Header on Desktop-- */
+@media only screen and (min-width: 768px) {
+     
+    header { 
+        justify-content: space-between;
+        }
+  
+    nav { padding-right: 24px;}
+      
+    nav ul { justify-content: flex-end; }
+  
+    header li { padding-left: 16px; }
+  
+    header li img {display: none;}
+  
+    a.index-logo { display: flex; }
+      
+    .index-logo {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        padding-left: 24px;
+        }
+  
+    .colmar { font-weight: bold; }
+  
+    .academy { color: #9B9B9B; }
+}
+
+/* -- Banner on Mobile-- */
+.banner-section {
+    background-color:#DBDBDB;
+    width: 100%;
+    padding-top: 64px;
+    }
+
+.banner-image img { width: 100%; }
+
+.banner-text {
+    padding: 32px 16px;
+    text-align: left;
+    }
+
+.banner-text p {
+    padding: 32px 0 24px 0;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 1.6;
+    }
+
+.start-button {
+    width: 100%;
+    color: white;
+    background-color: #9B9B9B;
+    padding: 8px;
+    font-weight: bold;
+    border: 0;
+    font-size: larger;
+    }
+
+/*  --Banner on Desktop-- */  
+@media only screen and (min-width: 768px) 
+{
+    .banner-section { 
+        padding-top: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-image {
+        padding: 32px 24px;
+    }
+
+    .banner-text {
+        height: 50%;
+        padding-left: 0px;
+    }
+
+    .start-button {
+        background-color: #4A4A4A;
+        width: 100%;
+    }
+
+}    
+
+/* -- Articles on Mobile-- */
+.information-section { background-color: #F3F5F5 ; }
+.articles-container {padding: 16px;}
+/*.article {width: 100%;}*/
+picture img {width: 100%;}
+
+.article-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    text-align: left;
+    }
+
+.article-text p { padding: 8px 0;}
+
+.article-text a {color: #4A90E2;}
+
+/*  --Articles on Desktop-- */
+@media only screen and (min-width: 768px) {
+
+    .information img { width: 100%;}
+
+    .information-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+    
+
+    .information {
+        padding: 32px 24px;
+        }
+      
+    .information-text { text-align: left;}
+   
+    .information-text h2 { padding: 32px 0 24px 0; }
+   
+    .information-text p {padding-bottom: 32px;}
+
+    .articles-container {padding: 0;}
+
+    .article {
+        display: flex;
+        align-items: center;
+        }
+    .article-text {padding: 0;}
+
+    .article picture {padding: 16px;}
+}
+
+
+
+/* -- Start learning on Mobile-- */
+.start-learning { 
+    background-color: #F5F4F5;
+    padding: 32px 24px;
+    }
+
+.start-learning h2 { margin-bottom: 8px;} /* compensating for .card margins, originally 16px*/
+
+.card { 
+    background-color: #d8d8d8;
+    margin-top: 8px;
+    }
+
+ .card-text {padding: 24px 16px;}
+
+ .card h3 {text-align: left;}
+
+ .card img {
+    width: 100%;
+    }
+
+/*   Start learning on Desktop  */
+
+@media only screen and (min-width: 768px) {
+
+    .start-learning { 
+        background-color: #eaebec;
+        padding: 32px 72px;
+    }
+
+    .card { 
+        text-align: left;
+        background-color: #ffffff;
+        width: 300px;
+        height: 300px;
+        margin: 16px;
+    }
+
+    .start-learning ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .card img { 
+        width: 100%; 
+        height: auto;
+        margin-bottom: 16px;
+    }
+
+    .card-text { padding: 16px; }    
+    .card-text span {padding: 8px 0;}   
+}
+
+/* -- Thesis exhibit on Mobile-- */
+
+.thesis-exhibits { 
+    padding: 32px 0 24px 0;
+    background-color: #F3F5F5;
+ }
+
+.thesis-exhibits h2 { padding-bottom: 16px; }
+
+.thesis-exhibits video { width: 100%; }
+
+/*  --Thesis exhibit on Desktop-- */
+@media only screen and (min-width: 768px) {
+
+    .thesis-exhibits .subsections-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subsections-container main {     
+        padding: 32px 24px;
+    }
+
+    .main-thesis-text { text-align: left;}
+
+    .main-thesis-text h2 { padding: 24px 0 8px 0; }
+
+    .thesis {
+        display: flex;
+        align-items: center;
+    }
+
+    .thesis-text {
+        text-align: left;
+        
+    }
+
+    .thesis-text p {
+        padding: 8px 0px;
+    }
+
+    .thesis-articles .thesis img {
+        padding: 16px;
+    }
+
+}    
+        
+/* -- Footer on Mobile-- */
+   footer { 
+    background-color: #F3F5F5;
+    text-align: left; 
+    padding: 16px;
+}
+
+/*  --Footer on Desktop-- */
+@media only screen and (min-width: 768px) {
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 16px 16px 70px 24px;
+        border-top: 1px solid #E9EBEB;
+    }
+
+    footer a {
+        padding-left: 8px;
+    }
+    
+}   
